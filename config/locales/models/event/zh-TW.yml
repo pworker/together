@@ -1,0 +1,9 @@
+zh-TW:
+  activerecord:
+    models:
+      event: "活動"
+    attributes:
+      event:
+        name: "名稱"
+        description: "描述"
+        start_at: "開始時間"

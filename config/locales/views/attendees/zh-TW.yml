@@ -1,0 +1,10 @@
+zh-TW:
+  attendees:
+    index:
+      Edit: "編輯"
+      Destroy: "刪除"
+      Back: "返回"
+    edit:
+      Back: "返回"
+    new:
+      Back: "返回"

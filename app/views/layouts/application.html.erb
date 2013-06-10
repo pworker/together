@@ -9,6 +9,15 @@
 <body>
 
 <%= yield %>
-
+  <div>
+    <%= link_to "中⽂文版",
+         :controller => controller.controller_name,
+         :action => controller.action_name,
+         :locale => "zh-TW" %> | 
+    <%= link_to "English",
+         :controller => controller.controller_name,
+         :action => controller.action_name,
+         :locale => "en" %>
+  </div>
 </body>
 </html>

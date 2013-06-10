@@ -1,11 +1,11 @@
-<h1>Listing events</h1>
+<h1><%= t(".title") %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Start at</th>
+      <th> <%= Event.human_attribute_name(:name) %> </th>
+      <th> <%= Event.human_attribute_name(:description)%> </th>
+      <th> <%= Event.human_attribute_name(:start_at) %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,10 +18,10 @@
         <td><%= event.name %></td>
         <td><%= event.description %></td>
         <td><%= event.start_at %></td>
-        <td><%= link_to 'Attend', new_event_attendee_path(event)%></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t(".Attend"), new_event_attendee_path(event)%></td>
+        <td><%= link_to t(".Show"), event %></td>
+        <td><%= link_to t('.Edit'), edit_event_path(event) %></td>
+        <td><%= link_to t('.Destroy'), event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to t('.New Event'), new_event_path %>

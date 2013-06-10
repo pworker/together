@@ -1,0 +1,19 @@
+zh-TW:
+  events:
+    index:
+      title: "活動列表"
+      Attend: "參加"
+      Show: "顯示"
+      Edit: "編輯"
+      Destroy: "刪除"
+      New Event: "新增活動"
+    show:
+      Name: "名稱"
+      Description: "描述"
+      Start at: "開始時間"
+      Attendees list: "參加者名單"
+      Edit: "編輯"
+      Back: "返回"
+    edit:
+      Show: "顯示"
+      Back: "返回"

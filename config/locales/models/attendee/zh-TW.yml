@@ -1,0 +1,10 @@
+zh-TW:
+  activerecord:
+    models:
+      attendee: "參與者"
+    attributes:
+      attendee:
+        name: "姓名"
+        email: "email"
+        phone: "電話"
+        comment: "評論"
