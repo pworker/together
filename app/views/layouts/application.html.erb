@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Together</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Together</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
 
-<%= yield %>
-  <div>
-    <%= link_to "中⽂文版",
-         :controller => controller.controller_name,
-         :action => controller.action_name,
-         :locale => "zh-TW" %> | 
-    <%= link_to "English",
-         :controller => controller.controller_name,
-         :action => controller.action_name,
-         :locale => "en" %>
-  </div>
-</body>
-</html>
+        <div class="wrapper">
+          <div class="proper-content">
+            <div class="row">
+              <div class="span9 offset1">
+                <%= yield %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-wrapper">
+          <footer>
+          <%= link_to "中⽂文版",
+            :controller => controller.controller_name,
+            :action => controller.action_name,
+            :locale => "zh-TW" %> | 
+            <%= link_to "English",
+            :controller => controller.controller_name,
+            :action => controller.action_name,
+            :locale => "en" %>
+            </footer>
+          </div>
+        </body>
+      </html>

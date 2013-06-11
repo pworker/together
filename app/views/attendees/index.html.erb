@@ -1,8 +1,30 @@
-<h1>Attendees list</h1>
-  <% @attendees.each do |attendee| %>
-    <%= attendee.name %>
-    <%= link_to t(".Edit"), edit_event_attendee_path(@event,attendee)%>
-    <%= link_to t(".Destroy"), event_attendee_path(@event,attendee), method: :delete, data: { confirm: 'Are you sure?' } %>
-    <br>
-  <% end %>
-<%= link_to t(".Back"), event_path(@event)%>
+<h1><%= t(".Attendees list") %></h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th><%= Attendee.human_attribute_name(:name)%></th>
+      <th><%= Attendee.human_attribute_name(:email)%></th>
+      <th><%= Attendee.human_attribute_name(:phone)%></th>
+      <th><%= Attendee.human_attribute_name(:comment)%></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attendees.each do |attendee| %>
+      <tr>
+        <td> <%= attendee.name %> </td>
+        <td> <%= attendee.email %> </td>
+        <td> <%= attendee.phone %> </td>
+        <td> <%= attendee.comment %> </td>
+        <td>
+          <div class="btn-group">
+            <%= link_to t(".Edit"), edit_event_attendee_path(@event,attendee), :class => "btn"%>
+            <%= link_to t(".Destroy"), event_attendee_path(@event,attendee), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn" %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to t(".Back"), event_path(@event), :class => "btn"%>

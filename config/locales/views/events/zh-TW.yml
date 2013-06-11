@@ -16,4 +16,8 @@ zh-TW:
       Back: "返回"
     edit:
       Show: "顯示"
+      Editing event: "編輯活動"
+    form:
       Back: "返回"
+    new:
+      New event: "新增活動"

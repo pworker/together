@@ -1,19 +1,22 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-<strong><%= t(".Name") %></strong>
+<div class="hero-unit">
+  <p>
+  <strong><%= t(".Name") %></strong>
   <%= @event.name %>
-</p>
+  </p>
 
-<p>
-<strong><%= t(".Description") %></strong>
+  <p>
+  <strong><%= t(".Description") %></strong>
   <%= @event.description %>
-</p>
+  </p>
 
-<p>
-<strong><%= t(".Start at")%></strong>
+  <p>
+  <strong><%= t(".Start at")%></strong>
   <%= @event.start_at %>
-</p>
-<%= link_to t(".Attendees list"), event_attendees_path(@event)%> | 
-<%= link_to t(".Edit"), edit_event_path(@event) %> |
-<%= link_to t(".Back"), events_path %>
+  </p>
+  <%= link_to t(".Attendees list"), event_attendees_path(@event), :class =>"btn"%>
+  <div class="btn-group">
+    <%= link_to t(".Edit"), edit_event_path(@event), :class => "btn" %>
+    <%= link_to t(".Back"), events_path, :class => "btn" %>
+  </div>
+</div>

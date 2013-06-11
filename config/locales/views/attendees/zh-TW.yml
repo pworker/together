@@ -1,10 +1,11 @@
 zh-TW:
   attendees:
     index:
+      Attendees list: "參與者名單"
       Edit: "編輯"
       Destroy: "刪除"
       Back: "返回"
-    edit:
+    form:
       Back: "返回"
     new:
-      Back: "返回"
+      New attendee: "新增參與者"

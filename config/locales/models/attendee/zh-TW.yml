@@ -5,6 +5,6 @@ zh-TW:
     attributes:
       attendee:
         name: "姓名"
-        email: "email"
+        email: "Email"
         phone: "電話"
         comment: "評論"
